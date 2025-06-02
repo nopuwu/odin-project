@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* My solution doesn't allow text to go under close button, but I'll live with it */
+
 html, body {
   height: 100%;
 }
@@ -20,6 +22,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  gap: 16px;
 }
 
 .icon {
@@ -33,6 +40,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex: 1 0 auto;
 }
 
 .close-button {
@@ -48,12 +57,17 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+
+  flex: 1 0 auto;
+  margin: 0px;
 }
 
 button {
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
+
+  margin-top: 8px;
 }
 
 button.continue {
@@ -66,4 +80,15 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
